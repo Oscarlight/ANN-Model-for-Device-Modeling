@@ -7,7 +7,9 @@ groups, both of them are infinitely differentiable:
 2. **Advantage:** this model has better linearity around Vds = 0
 3. **Disadvantage:** current density can oscillate around 0 when Vgs < 50 mV
 4. **Verdict:** use it if the linearity of Id-Vds around Vds = 0 is important
-5. **Versions:** there are three versions of this model provided:
+5. **Versions:** 
+	there are three versions of this model provided:
+    
     1. tan_2h: with two hidden layers
     2. tan_3h: with three hidden layers
     3. tan_4h: with four hidden layers
