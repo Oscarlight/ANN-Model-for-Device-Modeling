@@ -6,7 +6,6 @@ There are many models for you to choose, they can be seperated into
 groups, both of them are infinitely differentiable:
 
 ### tan model
-
 * **Description:** in this model, all activation function are tanh.
 * **Advantage:** this model has better linearity around Vds = 0
 * **Disadvantage:** current density can oscillate around 0 when Vgs < 50 mV
@@ -29,8 +28,8 @@ groups, both of them are infinitely differentiable:
         1. sig_1q_7: with 7 neurons in the hidden layer
         2. sig_1q_9: with 9 neurons in the hidden layer
    - for the 3nd quadrant, there are three versions:
-   	1. sig_3q_5: with 5 neurons in the hidden layer
- 	2. sig_3q_7: with 7 neurons in the hidden layer
-	3. sig_3q_9: with 9 neurons in the hidden layer
+   		1. sig_3q_5: with 5 neurons in the hidden layer
+ 		2. sig_3q_7: with 7 neurons in the hidden layer
+		3. sig_3q_9: with 9 neurons in the hidden layer
 
 
