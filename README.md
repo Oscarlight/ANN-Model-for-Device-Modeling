@@ -2,13 +2,13 @@
 
 ## 1. Model Overview
 
-These models use feed forward artificial neuron network (ANN) to model emerging electronic device. This ANN model paradigm uses a special designed loss function to achieve much better accuracy in the sub-threshold region than standard quadratic loss function. Besides this, these ANN models are easy to use and guarantee to be infinitely differentiable everywhere.
+Feed forward artificial neuron networks (ANN) are used to model emerging electronic devices. This ANN modeling paradigm uses a special designed loss function to achieve much better accuracy in the sub-threshold region than standard quadratic loss function. Besides this, these ANN models are easy to use and guarantee to be infinitely differentiable everywhere.
 
 We have trained two different types of model: one using logistic sigmoid functions as activation functions, and the other using hyperbolic tangent functions as activation functions. Brief descriptions are followed:
 
 ### a) Model with logistic sigmoid function (*sig* model)
 
-This model has only one hidden layer, which has 5 to 9 neurons in different versions. The first and third quadrants are modeled independently, then add them together.
+This model has only one hidden layer, which has 5 to 7 neurons in different versions. The first and third quadrants are modeled independently, then add them together.
 
 - **Advantage**: excellent accuracy in the *deep* sub-threshold region (i.e. Vtg < 50 mV)
 - **Disadvantage**: nonlinear turn-on around Vds = 0
@@ -46,9 +46,9 @@ The interfaces to use this model are in *neuralFET.py*. Here is a short tutorial
 
 ### a) Use *sig* model
 
-First, read the model file, and create a function accordingly. For example, if we would like to use *sig_1q_9* for the first quadrant, and *sig_3q_7* for the thrid quadrant, then:
+First, read the model file, and create a function accordingly. For example, if we would like to use *sig_1q_7* for the first quadrant, and *sig_3q_5* for the thrid quadrant, then:
 ```python
-sig_ann = make_sig('sig_1q_9/', 'sig_3q_7/', 2)	
+sig_ann = make_sig('sig_1q_7/', 'sig_3q_5/', 2)	
 ```
 The last *"2"* indicate there is *n-1* hidden layer(s).
 Now you can get current density from Vgs and Vds by:
@@ -62,7 +62,7 @@ Just like *sig* model, if we would like to use *tan_2h* version:
 ```python
 tan_ann = make_tan('tan_2h/', 3)	
 ```
-Then to get current density, simple use:
+Remember, when you switch to *tan_3h* or *tan_4h*, you need to change the second argument to 4 or 5 respectively. To get current density, simply use:
 ```python
 id = tan_ann(Vgs, Vds)
 # Vgs and Vds have unit of V, id has unit of A/m 	
@@ -81,4 +81,4 @@ For transfer plot, **x_list** is a list of Vgs and **c_list** is a list of Vds;
 
 To save this 2D list into csv file, there is also a *saveData* function to help do so. This function is in *ffnn.py*.
 
-Enjoy using this model! 
+**_Enjoy using this model!_** 
