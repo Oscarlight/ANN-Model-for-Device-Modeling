@@ -12,7 +12,7 @@ This model has only one hidden layer, which has 5 to 7 neurons in different vers
 
 - **Advantage**: excellent accuracy in the *deep* sub-threshold region (i.e. Vtg < 50 mV)
 - **Disadvantage**: nonlinear turn-on around Vds = 0
-- **When to use**: when deep sub-threshold region is important, also *sig* model is light-weighted compared to *tan* model. If you can live with the nonlinearity around Vds = 0. *sig* model is your friend.
+- **When to use**: when deep sub-threshold region is important. Also since *sig* model is light-weighted compared to *tan* model, if you can live with the nonlinearity around Vds = 0. *sig* model is your friend.
 
 The *sig* model comes with different versions for both first and third quadrants:
 
