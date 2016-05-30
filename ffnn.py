@@ -49,9 +49,9 @@ def make_sig(fModel1, fModel2, nlyr):
 	def current(Vg, Vd):
 		v1 = [(Vd-0.2)*5, (Vg-0.2)*5]
 		v2 = [(Vd+0.05)*20, (Vg-0.2)*5]
-		i1 = (forwardprop(sigmoid, wb1[0], wb1[1], v1)[0]) * 275
-		i2 = (forwardprop(sigmoid, wb1[0], wb2[1], v2)[0]) * 45
-		return i1 + i2
+		i1 = (forwardprop(sigmoid, wb1[0], wb1[1], v1)[0]) * 375
+		i2 = (forwardprop(sigmoid, wb2[0], wb2[1], v2)[0]) * 45
+		return i1 - i2
 	return current
 
 def make_tan(fModel, nlyr):
@@ -59,7 +59,7 @@ def make_tan(fModel, nlyr):
 	wb = importWB(fModel, nlyr)
 	def current(Vg, Vd):
 		v = [(Vd-0.15)*4, (Vg-0.2)*5]
-		i = (forwardprop(math.tanh, wb[0], wb[1], v)[0]) * 275
+		i = (forwardprop(math.tanh, wb[0], wb[1], v)[0]) * 375
 		return i
 	return current
 
@@ -101,7 +101,6 @@ def saveData(label,fData, c_list, r_list, save_list, scale, c_list_label):
 			for j in range(len(c_list)):
 				row.append(save_list[j][i] * scale)
 			iwriter.writerow(row)
-
 
 
 if __name__ == "__main__":
