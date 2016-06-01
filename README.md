@@ -12,7 +12,7 @@ This model has only one hidden layer, which has 5 to 7 neurons in different vers
 
 - **Advantage**: excellent accuracy in the *deep* sub-threshold region (i.e. Vtg < 50 mV)
 - **Disadvantage**: nonlinear turn-on around Vds = 0
-- **When to use**: when deep sub-threshold region is important. Also since *sig* model is light-weighted compared to *tan* model, if you can live with the nonlinearity around Vds = 0. *sig* model is your friend.
+- **When to use**: when deep sub-threshold region is important. Since *sig* model is light-weighted compared to *tan* model, if you can live with the nonlinearity around Vds = 0, *sig* model is your friend.
 
 The *sig* model comes with different versions for both first and third quadrants:
 
@@ -57,7 +57,7 @@ id = sig_ann(Vgs, Vds)
 # Vgs and Vds have unit of V, id has unit of A/m
 ```
 
-### a) Use *tan* model
+### b) Use *tan* model
 Just like *sig* model, if we would like to use *tan_2h* version:
 ```python
 tan_ann = make_tan('tan_2h/', 3)	
