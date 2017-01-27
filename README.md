@@ -1,4 +1,5 @@
-# ANN model for compact modeling of Thin-TFET
+# ANN model for compact modeling of Thin-TFET 
+# (Depreciated, see Pi-NN)
 
 ## 1. Model Overview
 
